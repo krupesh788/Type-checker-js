@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Number Type Checker</h1>
+
+        Enter a number:
+        <br><br>
+
+        <input type="number" id="num1">
+        <br>
+        <br>
+
+        <button onclick="typecheck()">Check Number Type</button>
+        <p id="p1"></p>
+
+    </div>
+
+    <script>
+        function typecheck() {
+            let num1 =  parseFloat(document.getElementById("num1").value);
+
+            if (!isNaN(num1))
+            {
+                if (Number.isInteger(num1)) {
+
+
+                    document.getElementById("p1").innerHTML = `${num1} is an integer.`;
+                }
+                else {
+
+                    document.getElementById("p1").innerHTML = `${num1} is a float.`;
+                }
+
+            }
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
